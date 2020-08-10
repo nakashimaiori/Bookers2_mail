@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:top, :about]
   before_action :baria_user, only: [:edit, :update]
 
+
+
+
   def show
     @book = Book.new
     @user = User.find(params[:id])
